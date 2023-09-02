@@ -303,6 +303,16 @@ const arrayForLooping = [
   ["anoter", "array", "inside", "the", "first", "array"],
   true,
 ];
+
+const newArray = []; 
+
 for (let i = 0; i < arrayForLooping.length; i++) {
-  console.log(`arraylooping[${i}]`);
+  //reading the array
+  console.log(`arraylooping[${i}] = ${arrayForLooping[i]}`);
+  //adding data to a new arrayh
+  //newArray[i] = typeof arrayForLooping[i];
+  newArray.push(typeof arrayForLooping[i]); 
+  console.log(`newarrayforlooping[${i}] = ${newArray[i]}`);
 }
+
+//continue and break

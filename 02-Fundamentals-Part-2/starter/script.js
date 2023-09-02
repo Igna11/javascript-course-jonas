@@ -304,15 +304,35 @@ const arrayForLooping = [
   true,
 ];
 
-const newArray = []; 
+const newArray = [];
 
 for (let i = 0; i < arrayForLooping.length; i++) {
   //reading the array
   console.log(`arraylooping[${i}] = ${arrayForLooping[i]}`);
   //adding data to a new arrayh
   //newArray[i] = typeof arrayForLooping[i];
-  newArray.push(typeof arrayForLooping[i]); 
+  newArray.push(typeof arrayForLooping[i]);
   console.log(`newarrayforlooping[${i}] = ${newArray[i]}`);
 }
 
 //continue and break
+// continuo skips that iteration and jumps to the following is the condition is met
+// break stops de iterations when the condition is met
+
+//while loops
+let rep = 1;
+while (rep <= 10) {
+  console.log(rep);
+  rep++;
+}
+
+//example with a dice:
+let dice = Math.trunc(Math.random() * 6) + 1;
+let counter = 0;
+while (dice != 6) {
+  counter++;
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log(`It took me ${counter} rolls of the dice to get a 6!`);
+  }
+}

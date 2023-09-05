@@ -364,3 +364,5 @@ This is a DIFFICULT challenge (we haven't done this before)! Here is how to solv
 
 GOOD LUCK 😀
 */
+
+const bills4 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];

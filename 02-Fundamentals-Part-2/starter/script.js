@@ -366,3 +366,9 @@ GOOD LUCK 😀
 */
 
 const bills4 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tip4 = [];
+console.log(tip4);
+for(let i=0; i < bills4.length; i++){
+  tip4.push(calcTip(bills4[i]));
+}
+console.log(tip4);

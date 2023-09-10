@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(255, 200, 35, 0.3);
+  font-family: Cambria, Cochin;
+  font-size: 20px;
+  padding: 75px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 20px;
+}
+.first {
+  color: red;
+}
+
+#your-name {
+  background-color: rgba(53, 53, 168, 0.2);
+  border: 5px solid rgba(53, 53, 168, 0.7);
+  width: 400px;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+a {
+  background-color: red;
+  border-radius: 5px;
+}
+
+#some-random-image {
+  width: 40%;
+  border-radius: 10px;
+}
+#your-name h2 {
+  color: rgb(35, 101, 142);
+}

@@ -31,11 +31,11 @@ document.querySelector('.check').addEventListener('click', function () {
       score--;
       document.querySelector('.score').textContent = score;
       console.log(score);
+    } else {
+      console.log(score);
+      displayMessage('💥You lost dude, try next time💥');
+      document.querySelector('body').style.backgroundColor = 'red';
+      document.querySelector('.score').textContent = 0;
     }
-  } else {
-    console.log(score);
-    displayMessage('💥You lost dude, try next time💥');
-    document.querySelector('body').style.backgroundColor = 'red';
-    document.querySelector('.score').textContent = 0;
   }
 });

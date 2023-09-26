@@ -38,6 +38,7 @@ function init() {
 
 init();
 
+newGameButton.addEventListener('click', init);
 rollDiceButton.addEventListener('click', rollDice);
 holdPointButton.addEventListener('click', holdPoint);
 
@@ -98,4 +99,6 @@ function holdPoint() {
       switchPlayer();
     }
   }
+  console.log('activeplayer', activePlayer);
+  console.log(scores[activePlayer - 1]);
 }

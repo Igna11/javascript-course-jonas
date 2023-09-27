@@ -86,7 +86,7 @@ function holdPoint() {
     scores[activePlayer - 1] += currentScore;
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer - 1];
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer - 1] >= 100) {
       playing = false;
       dice.classList.add('hidden');
       document
@@ -100,5 +100,5 @@ function holdPoint() {
     }
   }
   console.log('activeplayer', activePlayer);
-  console.log(scores[activePlayer - 1]);
+  console.log(scores);
 }

@@ -28,6 +28,9 @@ const restaurant = {
   order: function (startedIndex, mainIndex) {
     return [this.starterMenu[startedIndex], this.mainMenu[mainIndex]];
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`there are 3 ingridients: ${ing1}, ${ing2},${ing3}.`);
+  },
 };
 
 //to de-strcuture objects we use curly braces {}
@@ -95,3 +98,44 @@ console.log(i, j);*/
 const [i, , [j, k]] = nested;
 console.log(i, j, k);
 */
+
+// The spread operator: ...
+// works on all iterables: arrays, strings, maps, sets NOT Objects
+const arr = [3, 4, 5, 6, 7, 8, 9, 0];
+const newArr = [0, 1, 2, ...arr];
+console.log(newArr);
+
+const newMainMenu = [...restaurant.mainMenu, 'tarta'];
+console.log(newMainMenu);
+
+const asd = [...newMainMenu, ...newArr];
+console.log(asd);
+
+const word = 'palabra';
+const wordArray = [...word, ' ', 's'];
+console.log(wordArray);
+/*
+const ingridients = [
+  prompt('Introduce first ingridient:\n'),
+  prompt('Introduce seocond ingridient:\n'),
+  prompt('Introduce third ingridient:\n'),
+];
+
+console.log(restaurant.orderPasta(...ingridients));
+*/
+
+// OBJECTS:
+
+const newRestaurant = { founded: 1850, ...restaurant, founder: 'Pepito' };
+console.log(newRestaurant);
+
+//Rest Pattern
+
+const [aa, bb, ...others] = ['a', 'b', 'o', 't', 'h', 'e', 'r', 's'];
+console.log(aa);
+console.log(bb);
+console.log(others);
+
+const { sat, ...weekdays } = restaurant.openingHours;
+
+console.log(weekdays);

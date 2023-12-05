@@ -294,3 +294,31 @@ for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
   console.log(`Odd of Victory ${teamStr}: ${odd}`);
 }
+
+// Sets
+const ordersSet = new Set([
+  'Pasta',
+  'pizza',
+  'milanesa',
+  'bife de chorizo',
+  'pizza',
+  'Pizza',
+]);
+
+console.log(ordersSet);
+console.log(ordersSet.size);
+console.log(ordersSet.has('pizza'));
+console.log(ordersSet.has('pizzza'));
+ordersSet.add('Garlic Bread');
+console.log(ordersSet);
+ordersSet.delete('pizza');
+console.log(ordersSet);
+for (const order of ordersSet) console.log(order);
+ordersSet.clear();
+console.log(ordersSet);
+
+const staff = ['waiter', 'chef', 'waiter', 'manager', 'chef', 'waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+// MAPS

@@ -268,16 +268,29 @@ and the number of goals as the value. In this game, it will look like this:
 GOOD LUCK 😀
 */
 //1)
-console.log(game.scored);
+console.log('exercise 1:', game.scored);
 let counter = 1;
 for (const item of game.scored) {
   console.log(`Goal ${counter}: ${item}`);
   counter += 1;
 }
 
+// course solution
+console.log(
+  "course solution usign 'game.scored.entries()' where entries creates an iterable of the form '[i, element]'"
+);
+for (const [i, item] of game.scored.entries()) {
+  console.log(`Goal ${i + 1}: ${item}`);
+}
 //2)
 let finalOdd = 0;
-for (const odd of game.odds) {
+for (const odd of Object.values(game.odds)) {
   finalOdd += odd / 3;
 }
 console.log(finalOdd);
+
+//3)
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd of Victory ${teamStr}: ${odd}`);
+}

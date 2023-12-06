@@ -322,3 +322,30 @@ const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
 
 // MAPS
+const rest = new Map();
+rest.set('name', 'clasico italiano');
+rest.set(1, 'buenos aires');
+console.log(rest.set(2, 'Lisbon, portugal'));
+rest
+  .set('categories', ['italiano', 'español', 'Argentino'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'abiertooo')
+  .set(false, 'cerradoooo');
+
+const time = 21;
+console.log(
+  'boolean',
+  rest.get(time > rest.get('open') && time < rest.get('close'))
+);
+console.log(rest.has('categories'));
+rest.delete(2);
+console.log(rest);
+console.log(rest.size);
+//rest.clear():
+const arrayA = [1, 2];
+rest.set(arrayA, 'tes');
+console.log(rest);
+console.log(rest.get(arrayA));
+rest.set(document.querySelector('h1'), 'Heading');
+console.log(rest);
